@@ -1,0 +1,219 @@
+/* Splošne nastavitve */
+* {
+    box-sizing: border-box; /* Uporabi border-box za vse elemente */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%; /* Polna širina */
+    height: 100%;
+}
+
+/* Leva stran */
+.background {
+    width: 50%; /* Širina leve strani */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url("Slike/nike-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 40px; /* Preveri padding */
+}
+
+.logo-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.logo {
+    max-width: 120px; /* Velikost logotipa */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.slogan {
+    font-size: 60px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Desna stran */
+.form-wrapper {
+    width: 50%; /* Širina desne strani */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Sprememba nazaj na flex-start */
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    height: 100%;
+}
+
+.container {
+    width: 100%; 
+}
+
+/* Naslov */
+h1 {
+    text-align: left;
+    color: #333;
+    font-size: 2.2em;
+    margin: 10px 0 20px;
+}
+
+/* Obrazci */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+label {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 80%;
+    padding: 12px;
+    font-size: 0.95em;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Gumbi */
+button {
+    width: 85%;
+    padding: 12px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Pomožno besedilo */
+.prijava {
+    color: red;
+    text-align: left;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.register-text {
+    text-align: left;
+    font-size: 1em;
+    color: #333;
+    margin-top: 5px;
+}
+
+.register-text a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Seznam za preverjanje gesla */
+#password-checklist {
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.check-item {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.check-item::before {
+    content: "•"; 
+    margin-right: 8px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}
+
+/* Medijske poizvedbe za odzivnost */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Spremeni v stolpec za manjše zaslone */
+    }
+
+    .background {
+        display: none; /* Skrijte levo stran na manjših zaslonih */
+    }
+
+    .form-wrapper {
+        width: 100%; /* Polna širina */
+        padding: 20px; /* Manjša oblazinjenje za več prostora */
+        overflow-y: auto; /* Omogoči pomikanje */
+        align-items: center; /* Center elements */
+        justify-content: flex-start;
+    }
+
+    .container {
+        width: 90%; /* Sprememba širine za manjše zaslone */
+        display: flex; /* Dodano za centriranje */
+        flex-direction: column; /* Elementi bodo v stolpcu */
+        align-items: center; /* Center elements */
+        justify-content: center; /* Center vertically */
+    }
+
+    input {
+        padding: 10px; /* Manjše oblazinjenje za inpute na manjših zaslonih */
+        font-size: 0.9em; /* Manjša pisava */
+    }
+
+    button {
+        padding: 10px; /* Manjše oblazinjenje za gumbe */
+        font-size: 0.9em; /* Manjša pisava */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Manjša pisava za naslov */
+    }
+
+    .slogan {
+        font-size: 40px; /* Manjša pisava za slogan */
+    }
+}
